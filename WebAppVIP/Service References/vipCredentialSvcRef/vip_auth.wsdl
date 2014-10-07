@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:ns="http://www.w3.org/2000/09/xmldsig#" xmlns:vips="http://www.verisign.com/2006/08/vipservice" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://www.verisign.com/2006/08/vipservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="vip_auth.xsd" namespace="http://www.verisign.com/2006/08/vipservice" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetServerTimeRequest">
+    <wsdl:part name="GetServerTime" element="vips:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="GetServerTimeResponse">
+    <wsdl:part name="GetServerTimeResponse" element="vips:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActivateTokenRequest">
+    <wsdl:part name="ActivateToken" element="vips:ActivateToken" />
+  </wsdl:message>
+  <wsdl:message name="ActivateTokenResponse">
+    <wsdl:part name="ActivateTokenResponse" element="vips:ActivateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateTokenRequest">
+    <wsdl:part name="DeactivateToken" element="vips:DeactivateToken" />
+  </wsdl:message>
+  <wsdl:message name="DeactivateTokenResponse">
+    <wsdl:part name="DeactivateTokenResponse" element="vips:DeactivateTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnableTokenRequest">
+    <wsdl:part name="EnableToken" element="vips:EnableToken" />
+  </wsdl:message>
+  <wsdl:message name="EnableTokenResponse">
+    <wsdl:part name="EnableTokenResponse" element="vips:EnableTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="DisableTokenRequest">
+    <wsdl:part name="DisableToken" element="vips:DisableToken" />
+  </wsdl:message>
+  <wsdl:message name="DisableTokenResponse">
+    <wsdl:part name="DisableTokenResponse" element="vips:DisableTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="UnlockTokenRequest">
+    <wsdl:part name="UnlockToken" element="vips:UnlockToken" />
+  </wsdl:message>
+  <wsdl:message name="UnlockTokenResponse">
+    <wsdl:part name="UnlockTokenResponse" element="vips:UnlockTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateRequest">
+    <wsdl:part name="Validate" element="vips:Validate" />
+  </wsdl:message>
+  <wsdl:message name="ValidateResponse">
+    <wsdl:part name="ValidateResponse" element="vips:ValidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SynchronizeRequest">
+    <wsdl:part name="Synchronize" element="vips:Synchronize" />
+  </wsdl:message>
+  <wsdl:message name="SynchronizeResponse">
+    <wsdl:part name="SynchronizeResponse" element="vips:SynchronizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateMultipleRequest">
+    <wsdl:part name="ValidateMultiple" element="vips:ValidateMultiple" />
+  </wsdl:message>
+  <wsdl:message name="ValidateMultipleResponse">
+    <wsdl:part name="ValidateMultipleResponse" element="vips:ValidateMultipleResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckOTPRequest">
+    <wsdl:part name="CheckOTP" element="vips:CheckOTP" />
+  </wsdl:message>
+  <wsdl:message name="CheckOTPResponse">
+    <wsdl:part name="CheckOTPResponse" element="vips:CheckOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTemporaryPasswordRequest">
+    <wsdl:part name="SetTemporaryPassword" element="vips:SetTemporaryPassword" />
+  </wsdl:message>
+  <wsdl:message name="SetTemporaryPasswordResponse">
+    <wsdl:part name="SetTemporaryPasswordResponse" element="vips:SetTemporaryPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetTemporaryPwdExpirationRequest">
+    <wsdl:part name="SetTemporaryPwdExpiration" element="vips:SetTemporaryPwdExpiration" />
+  </wsdl:message>
+  <wsdl:message name="SetTemporaryPwdExpirationResponse">
+    <wsdl:part name="SetTemporaryPwdExpirationResponse" element="vips:SetTemporaryPwdExpirationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTemporaryPwdExpirationRequest">
+    <wsdl:part name="GetTemporaryPwdExpiration" element="vips:GetTemporaryPwdExpiration" />
+  </wsdl:message>
+  <wsdl:message name="GetTemporaryPwdExpirationResponse">
+    <wsdl:part name="GetTemporaryPwdExpirationResponse" element="vips:GetTemporaryPwdExpirationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenInformationRequest">
+    <wsdl:part name="GetTokenInformation" element="vips:GetTokenInformation" />
+  </wsdl:message>
+  <wsdl:message name="GetTokenInformationResponse">
+    <wsdl:part name="GetTokenInformationResponse" element="vips:GetTokenInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdminCodeRequest">
+    <wsdl:part name="GetAdminCode" element="vips:GetAdminCode" />
+  </wsdl:message>
+  <wsdl:message name="GetAdminCodeResponse">
+    <wsdl:part name="GetAdminCodeResponse" element="vips:GetAdminCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPRequest">
+    <wsdl:part name="SendOTP" element="vips:SendOTP" />
+  </wsdl:message>
+  <wsdl:message name="SendOTPResponse">
+    <wsdl:part name="SendOTPResponse" element="vips:SendOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegisterRequest">
+    <wsdl:part name="Register" element="vips:Register" />
+  </wsdl:message>
+  <wsdl:message name="RegisterResponse">
+    <wsdl:part name="RegisterResponse" element="vips:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendTemporaryPasswordRequest">
+    <wsdl:part name="SendTemporaryPassword" element="vips:SendTemporaryPassword" />
+  </wsdl:message>
+  <wsdl:message name="SendTemporaryPasswordResponse">
+    <wsdl:part name="SendTemporaryPasswordResponse" element="vips:SendTemporaryPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GenerateTemporaryPasswordRequest">
+    <wsdl:part name="GenerateTemporaryPassword" element="vips:GenerateTemporaryPassword" />
+  </wsdl:message>
+  <wsdl:message name="GenerateTemporaryPasswordResponse">
+    <wsdl:part name="GenerateTemporaryPasswordResponse" element="vips:GenerateTemporaryPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubmitTxnVerificationRequest">
+    <wsdl:part name="SubmitTxnVerification" element="vips:SubmitTxnVerification" />
+  </wsdl:message>
+  <wsdl:message name="SubmitTxnVerificationResponse">
+    <wsdl:part name="SubmitTxnVerificationResponse" element="vips:SubmitTxnVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="PollTxnVerificationRequest">
+    <wsdl:part name="PollTxnVerification" element="vips:PollTxnVerification" />
+  </wsdl:message>
+  <wsdl:message name="PollTxnVerificationResponse">
+    <wsdl:part name="PollTxnVerificationResponse" element="vips:PollTxnVerificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeliverTxnOTPRequest">
+    <wsdl:part name="DeliverTxnOTP" element="vips:DeliverTxnOTP" />
+  </wsdl:message>
+  <wsdl:message name="DeliverTxnOTPResponse">
+    <wsdl:part name="DeliverTxnOTPResponse" element="vips:DeliverTxnOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTxnOTPRequest">
+    <wsdl:part name="VerifyTxnOTP" element="vips:VerifyTxnOTP" />
+  </wsdl:message>
+  <wsdl:message name="VerifyTxnOTPResponse">
+    <wsdl:part name="VerifyTxnOTPResponse" element="vips:VerifyTxnOTPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCRRequest">
+    <wsdl:part name="ValidateCR" element="vips:ValidateCR" />
+  </wsdl:message>
+  <wsdl:message name="ValidateCRResponse">
+    <wsdl:part name="ValidateCRResponse" element="vips:ValidateCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeliverSMSRequest">
+    <wsdl:part name="DeliverSMS" element="vips:DeliverSMS" />
+  </wsdl:message>
+  <wsdl:message name="DeliverSMSResponse">
+    <wsdl:part name="DeliverSMSResponse" element="vips:DeliverSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAdapterConfigurationRequest">
+    <wsdl:part name="GetAdapterConfiguration" element="vips:GetAdapterConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="GetAdapterConfigurationResponse">
+    <wsdl:part name="GetAdapterConfigurationResponse" element="vips:GetAdapterConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAdapterConfigurationRequest">
+    <wsdl:part name="SetAdapterConfiguration" element="vips:SetAdapterConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="SetAdapterConfigurationResponse">
+    <wsdl:part name="SetAdapterConfigurationResponse" element="vips:SetAdapterConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="vipSoapInterface">
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input message="vips:GetServerTimeRequest" />
+      <wsdl:output message="vips:GetServerTimeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateToken">
+      <wsdl:input message="vips:ActivateTokenRequest" />
+      <wsdl:output message="vips:ActivateTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateToken">
+      <wsdl:input message="vips:DeactivateTokenRequest" />
+      <wsdl:output message="vips:DeactivateTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="EnableToken">
+      <wsdl:input message="vips:EnableTokenRequest" />
+      <wsdl:output message="vips:EnableTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DisableToken">
+      <wsdl:input message="vips:DisableTokenRequest" />
+      <wsdl:output message="vips:DisableTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="UnlockToken">
+      <wsdl:input message="vips:UnlockTokenRequest" />
+      <wsdl:output message="vips:UnlockTokenResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <wsdl:input message="vips:ValidateRequest" />
+      <wsdl:output message="vips:ValidateResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Synchronize">
+      <wsdl:input message="vips:SynchronizeRequest" />
+      <wsdl:output message="vips:SynchronizeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateMultiple">
+      <wsdl:input message="vips:ValidateMultipleRequest" />
+      <wsdl:output message="vips:ValidateMultipleResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOTP">
+      <wsdl:input message="vips:CheckOTPRequest" />
+      <wsdl:output message="vips:CheckOTPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTemporaryPassword">
+      <wsdl:input message="vips:SetTemporaryPasswordRequest" />
+      <wsdl:output message="vips:SetTemporaryPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetTemporaryPwdExpiration">
+      <wsdl:input message="vips:SetTemporaryPwdExpirationRequest" />
+      <wsdl:output message="vips:SetTemporaryPwdExpirationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemporaryPwdExpiration">
+      <wsdl:input message="vips:GetTemporaryPwdExpirationRequest" />
+      <wsdl:output message="vips:GetTemporaryPwdExpirationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTokenInformation">
+      <wsdl:input message="vips:GetTokenInformationRequest" />
+      <wsdl:output message="vips:GetTokenInformationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminCode">
+      <wsdl:input message="vips:GetAdminCodeRequest" />
+      <wsdl:output message="vips:GetAdminCodeResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <wsdl:input message="vips:SendOTPRequest" />
+      <wsdl:output message="vips:SendOTPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input message="vips:RegisterRequest" />
+      <wsdl:output message="vips:RegisterResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SendTemporaryPassword">
+      <wsdl:input message="vips:SendTemporaryPasswordRequest" />
+      <wsdl:output message="vips:SendTemporaryPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTemporaryPassword">
+      <wsdl:input message="vips:GenerateTemporaryPasswordRequest" />
+      <wsdl:output message="vips:GenerateTemporaryPasswordResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SubmitTxnVerification">
+      <wsdl:input message="vips:SubmitTxnVerificationRequest" />
+      <wsdl:output message="vips:SubmitTxnVerificationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="PollTxnVerification">
+      <wsdl:input message="vips:PollTxnVerificationRequest" />
+      <wsdl:output message="vips:PollTxnVerificationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeliverTxnOTP">
+      <wsdl:input message="vips:DeliverTxnOTPRequest" />
+      <wsdl:output message="vips:DeliverTxnOTPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTxnOTP">
+      <wsdl:input message="vips:VerifyTxnOTPRequest" />
+      <wsdl:output message="vips:VerifyTxnOTPResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCR">
+      <wsdl:input message="vips:ValidateCRRequest" />
+      <wsdl:output message="vips:ValidateCRResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="DeliverSMS">
+      <wsdl:input message="vips:DeliverSMSRequest" />
+      <wsdl:output message="vips:DeliverSMSResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdapterConfiguration">
+      <wsdl:input message="vips:GetAdapterConfigurationRequest" />
+      <wsdl:output message="vips:GetAdapterConfigurationResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAdapterConfiguration">
+      <wsdl:input message="vips:SetAdapterConfigurationRequest" />
+      <wsdl:output message="vips:SetAdapterConfigurationResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="vipSoapBinding" type="vips:vipSoapInterface">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateToken">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeactivateToken">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnableToken">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisableToken">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnlockToken">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Validate">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Synchronize">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateMultiple">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOTP">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTemporaryPassword">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetTemporaryPwdExpiration">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemporaryPwdExpiration">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTokenInformation">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdminCode">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendOTP">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendTemporaryPassword">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateTemporaryPassword">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubmitTxnVerification">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PollTxnVerification">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeliverTxnOTP">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerifyTxnOTP">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCR">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeliverSMS">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdapterConfiguration">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetAdapterConfiguration">
+      <soap:operation soapAction="" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="vipSoapInterfaceService">
+    <wsdl:port name="vipServiceAPI" binding="vips:vipSoapBinding">
+      <soap:address location="https://vipservices-auth.verisign.com/prov/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

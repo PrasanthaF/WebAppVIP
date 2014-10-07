@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="aa3b361a-71c9-4e0d-8a0c-f26d600ed710" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Users\Administrator\Desktop\VIP_API\vip_auth.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="vip_auth.xsd" MetadataType="Schema" ID="526ee4f1-9ca3-4ad4-9100-3fdfdb40c61a" SourceId="1" SourceUrl="file:///C:/Users/Administrator/Desktop/VIP_API/vip_auth.xsd" />
+    <MetadataFile FileName="vip_auth.wsdl" MetadataType="Wsdl" ID="8addd73b-e9ad-42a3-abd2-619885ce406d" SourceId="1" SourceUrl="file:///C:/Users/Administrator/Desktop/VIP_API/vip_auth.wsdl" />
+    <MetadataFile FileName="vip_common_auth.xsd" MetadataType="Schema" ID="e3f51179-4675-487b-b867-fe726280f804" SourceId="1" SourceUrl="file:///C:/Users/Administrator/Desktop/VIP_API/vip_common_auth.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
